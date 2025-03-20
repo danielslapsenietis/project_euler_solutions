@@ -1,15 +1,11 @@
-def smallest_number():
+def is_divisible(num):
+    for i in range(1, 21):
+        if num % i != 0:
+            return False
+    return True
 
-    x = list(range(1, 2600))
-    y = list(range(1, 20))
+num = 20
+while not is_divisible(num):
+    num += 20
 
-    for i in x:
-        for j in y:
-            if i % j == 0:
-                print(i)
-
-print(smallest_number())
-
-
-##################### UNSOLVED #####################
-# gave up after 1h 10min solving
+print(num)
